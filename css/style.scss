@@ -1,0 +1,407 @@
+html, body, h1, h2, h3, h4, h5, h6, ul, li{
+	margin: 0;
+	padding: 0;
+}
+
+input,select,option,textarea{
+}
+
+p{
+}
+img{
+	border: 0;
+}
+
+
+
+a{
+	&:link,&:visited{
+		text-decoration: none;
+		color: #CCC;
+		text-shadow: 0px -1px 0px #111;
+		transition: all 500ms ease-in-out;
+		-o-transition: all 500ms ease-in-out;
+		-ms-transition: all 500ms ease-in-out;
+		-moz-transition: all 500ms ease-in-out;
+		-webkit-transition: all 500ms ease-in-out;
+	}
+	&:hover,&:activie{
+		text-shadow: 0px 0px 10px #FFF;
+		color: #FFF;
+	}
+}
+
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+
+/*
+.clearB{
+	clear: both;
+	height: 1px;
+	overflow: hidden;
+}
+*/
+
+.clear-fix{
+	zoom: 1; /* IE6&7 */
+	&:before,&:after{
+		content: "";
+		display: table;
+	}
+	&:after {
+	clear: both;
+	}
+}
+
+.error{
+	color: #F00;
+	font-size: 1.5em;
+}
+.info {
+	color: #00F;
+	font-size: 1.5em;
+}
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+body {
+	font-size: 13px;
+	color: #CCC;
+	background: url(../images/004.jpg) #000 fixed no-repeat 0% 0%;
+	cursor: default;
+	padding: 0;
+	text-align: center;
+	text-decoration: none;
+	font-family: "微軟正黑體","Microsoft JhengHei",Arial;
+	letter-spacing: 1px;
+	line-height: 25px;
+}
+.base{
+	margin: 0 auto;
+	text-align: left;
+	width: 980px;
+}
+
+.container{
+	float: right;
+	width: 630px;
+	&.container-inner{
+		margin: 5px 0 0 0;
+	}
+}
+.sidebar{
+	float: left;
+	width: 300px;
+	&.sidebar-inner{
+		margin-top: 10px;
+		&.sidebar-part{
+			width: 280px;
+			margin: 0 0 25px 0;
+			&.sidebar-part-underline{
+				margin: 0 0 10px 0;
+				display: inline-block;
+				width: 280px;
+				border-bottom: 1px solid #1A1A1A;
+				&.sidebar-part-title{
+					font-size: 15px;
+					color: #CCC;
+					display: inline-block;
+					border-bottom: 3px solid #d9d9d9;
+				}
+			}
+			&.sidebar-list{
+				list-style: none;
+				margin: 0 0 0 5px;
+				li{
+					list-style: none;
+				}
+			}
+		}
+	}
+}
+
+.sidebar-comment-content{
+	display: block;
+	width: 275px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.head{
+	width: 630px;
+	height: 300px;
+	background: transparent url(../images/head.jpg) scroll no-repeat 50% -250px;
+	position: relative;
+	opacity: 0.8;
+	color: #FFF;
+	&.blog-description{
+		position: absolute;
+		top: 60px;
+		left: 400px;
+		font-size: 12px;
+		font-weight: bold;
+		text-shadow: 0px 5px 4px #777;
+	}
+
+	&.homelink{
+		font-size: 20px;
+		font-weight: bold;
+		width: 160px;
+		height: 28px;
+	}
+	&h1{
+		width: 160px;
+		font-size: 20px;
+		font-weight: bold;
+		position: absolute;
+		top: 30px;
+		left: 392px;
+		text-shadow: 0px 5px 3px #777;
+	}
+
+}
+
+
+.main{
+	width: 630px;
+	margin: 20px 0 10px 0;
+}
+
+.post-div{
+	width: 630px;
+	margin: 0 0 10px 0;
+	&.post-title{
+		margin: 0 0 10px 0;
+		h4{
+			font-size: 16px;
+			font-weight: bold;
+			margin-bottom: 15px;
+			border-bottom: 1px solid #1A1A1A;
+			&.post-title-underline{
+				border-bottom: 3px solid #fffff5;
+				font-size: 15px;
+				display: inline-block;
+			}
+		}
+		&.post-date-span{
+			margin: 0 0 0 5px;
+		}	
+	}
+	&.post-content{
+		margin: 0 0 10px 0;
+		&.more-link{
+			display: inline-block;
+			margin: 20px 0 10px 560px;
+			font-weight: bold;
+		}
+		&.big-red{
+			font-size: 32px;
+			font-weight: bold;
+			color: red;
+		}
+		&.light{
+			background: #CCC;
+			color: #000;
+			font-weight: bold;
+			display: inline-block;
+			height: 25px;
+		}
+	}
+
+}
+
+
+
+.single-post-link{
+	width: 630px;
+	min-height: 90px;
+	border-top: 1px solid #1A1A1A;
+	&.post-prev{
+		background: transparent url(../images/post_prev.png) scroll no-repeat 0% 50%;
+		float: left;
+		margin: 20px 0 0 0;
+		&a{
+			display: inline-block;
+			margin-left: 25px;
+		}
+	}
+	&.post-next{
+		background: transparent url(../images/post_next.png) scroll no-repeat 100% 50%;
+		float: right;
+		margin: 20px 0 0 0;
+		&a{
+			display: inline-block;
+			margin-right: 25px;
+		}
+	}
+	&.shareicon-ul{
+		list-style: none;
+		margin: 5px 0 15px 5px;
+		display: inline-block;
+		vertical-align: middle;
+		&:hover li{
+			opacity: 0.2;
+		}
+		a{
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			background: url(../images/cute_profiles_sprite32.png) scroll no-repeat 0% 0%;
+			margin-right: 5px;
+			vertical-align: middle;
+			span {
+				visibility: hidden;
+			}
+			&.Plurk{
+				background-position: -992px 0px;
+			}
+			&.Twitter{
+				background-position: -33px 0px;
+			}
+			&.Facebook{
+				background-position: -65px 0px;
+			}
+			&.Sina{
+				background-position: 0px 0px;
+				width: 31px;
+			}
+		}
+		li{
+			float: left;
+			transition-property: opacity;
+			transition-duration: 500ms;
+			-moz-transition-property: opacity;
+			-moz-transition-duration: 500ms;
+			-webkit-transition-property: opacity;
+			-webkit-transition-duration: 500ms;
+			-o-transition-property: opacity;
+			-o-transition-duration: 500ms;
+			-ms-transition-property: opacity;
+			-ms-transition-duration: 500ms;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+
+}
+
+.post-link{
+	width: 630px;
+	border-top: 1px solid #1A1A1A;
+	padding: 15px 0 0 0;
+	text-align: center;
+	&span{
+		&.current{
+			display: inline-block;
+			border: 1px #FFF solid;
+			background: #FFF;
+			color: #000;
+			height: 25px;
+			line-height: 25px;
+			width: 25px;
+			margin: 5px 5px 0 0;
+		}
+	&a{
+		&.page-numbers{
+			display: inline-block;
+			border: 1px #FFF solid;
+			height: 25px;
+			line-height: 25px;
+			min-width: 25px;
+			margin: 5px 5px 0 0;
+			&:hover,&:active{
+				color: #000;
+				background: #CCC;
+			}
+		}
+	}
+}
+
+.footer{
+	width: 630px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+}
+
+.sidebar-about{
+	overflow: hidden;
+	width: 270px;
+	line-height: 25px;
+}
+
+#comments{
+	position: relative;
+	border-top: 1px solid #1A1A1A;
+	margin: 10px 0 0 0;
+	&#comments-title{
+		color: #CCC;
+		font-size: 13px;
+		padding: 20px 0 0 0;
+		font-weight: bold;
+		text-shadow: 0px 5px 4px #777;
+	}
+}
+
+
+#case .cse .gsc-control-cse,
+#case .gsc-control-cse{
+	border: none;
+	background: transparent;
+}
+
+#respond{
+	border: none;
+	&:hover,&:active{
+		color: #FFF;
+	}
+	&.form-allowed-tags{
+		margin: 10px 0 0 0;
+	}
+}
+
+h3#comments-title, h3#reply-title{
+	color: #FFF;
+}
+
+.trackback{
+	width: 300px;
+	margin: 10px;
+}
+
+#searchsubmit{
+	margin: 0 0 20px 0;
+}
+
+.commentlist{
+	margin: 25px 0 0 0;
+	li{
+		&.comment{
+			padding-left: 30px;
+		}
+	}
+	a{
+		&:link,&:visited{
+			text-shadow: 0px -1px 0px #111;
+			text-decoration: none;
+			color: #CCC;
+		}
+		&:hover,&:active{
+			text-shadow: 0px 0px 10px #FFF;
+			color: #FFF;
+		}
+	}
+}
+
+.comment-meta{
+	margin-bottom: 15px;
+}
+
